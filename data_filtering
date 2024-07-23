@@ -1,0 +1,912 @@
+# Data Filtering
+
+  ## Process shortreads {bash: STACKS}
+
+stacks process_shortreads -1 ./unprocessed/FM10.1.fastq.gz -2 ./unprocessed/FM10.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM10_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM11.1.fastq.gz -2 ./unprocessed/FM11.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM11_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM16.1.fastq.gz -2 ./unprocessed/FM16.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM16_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM20.1.fastq.gz -2 ./unprocessed/FM20.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM20_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM21.1.fastq.gz -2 ./unprocessed/FM21.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM21_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM22.1.fastq.gz -2 ./unprocessed/FM22.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM22_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM23.1.fastq.gz -2 ./unprocessed/FM23.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM23_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM24.1.fastq.gz -2 ./unprocessed/FM24.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM24_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM25.1.fastq.gz -2 ./unprocessed/FM25.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM25_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM26.1.fastq.gz -2 ./unprocessed/FM26.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM26_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM28.1.fastq.gz -2 ./unprocessed/FM28.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM28_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM29.1.fastq.gz -2 ./unprocessed/FM29.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM29_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM2.1.fastq.gz -2 ./unprocessed/FM2.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM2_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM31.1.fastq.gz -2 ./unprocessed/FM31.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM31_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM32.1.fastq.gz -2 ./unprocessed/FM32.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM32_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM38.1.fastq.gz -2 ./unprocessed/FM38.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM38_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM39.1.fastq.gz -2 ./unprocessed/FM39.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM39_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM3.1.fastq.gz -2 ./unprocessed/FM3.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM3_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM44.1.fastq.gz -2 ./unprocessed/FM44.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM44_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM45.1.fastq.gz -2 ./unprocessed/FM45.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM45_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM46.1.fastq.gz -2 ./unprocessed/FM46.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM46_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM47.1.fastq.gz -2 ./unprocessed/FM47.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM47_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM48.1.fastq.gz -2 ./unprocessed/FM48.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM48_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM49.1.fastq.gz -2 ./unprocessed/FM49.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM49_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM4.1.fastq.gz -2 ./unprocessed/FM4.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM4_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM5.1.fastq.gz -2 ./unprocessed/FM5.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM5_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM50.1.fastq.gz -2 ./unprocessed/FM50.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM50_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM51.1.fastq.gz -2 ./unprocessed/FM51.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM51_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM52.1.fastq.gz -2 ./unprocessed/FM52.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM352_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM54.1.fastq.gz -2 ./unprocessed/FM54.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM54_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM58.1.fastq.gz -2 ./unprocessed/FM58.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM58_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM59.1.fastq.gz -2 ./unprocessed/FM59.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM59_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM61.1.fastq.gz -2 ./unprocessed/FM61.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM61_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM65.1.fastq.gz -2 ./unprocessed/FM65.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM65_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM67.1.fastq.gz -2 ./unprocessed/FM67.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM67_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM72.1.fastq.gz -2 ./unprocessed/FM72.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM72_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM73.1.fastq.gz -2 ./unprocessed/FM73.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM73_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM75.1.fastq.gz -2 ./unprocessed/FM75.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM75_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM8.1.fastq.gz -2 ./unprocessed/FM8.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM8_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM80.1.fastq.gz -2 ./unprocessed/FM80.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM80_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM85.1.fastq.gz -2 ./unprocessed/FM85.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM85_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM9.1.fastq.gz -2 ./unprocessed/FM9.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM9_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM91.1.fastq.gz -2 ./unprocessed/FM91.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM91_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM92.1.fastq.gz -2 ./unprocessed/FM92.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM92_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM93.1.fastq.gz -2 ./unprocessed/FM93.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM93_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/FM94.1.fastq.gz -2 ./unprocessed/FM94.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log FM94_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB1.1.fastq.gz -2 ./unprocessed/ISB1.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB1_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB10.1.fastq.gz -2 ./unprocessed/ISB10.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB10_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB11.1.fastq.gz -2 ./unprocessed/ISB11.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB11_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB12.1.fastq.gz -2 ./unprocessed/ISB12.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB12_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB13.1.fastq.gz -2 ./unprocessed/ISB13.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB13_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB17.1.fastq.gz -2 ./unprocessed/ISB17.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB17_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB19.1.fastq.gz -2 ./unprocessed/ISB19.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB19_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB20.1.fastq.gz -2 ./unprocessed/ISB20.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB20_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB21.1.fastq.gz -2 ./unprocessed/ISB21.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB21_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB5.1.fastq.gz -2 ./unprocessed/ISB5.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB5_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB5.1.fastq.gz -2 ./unprocessed/ISB5.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB5_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB8.1.fastq.gz -2 ./unprocessed/ISB8.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB8_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISB9.1.fastq.gz -2 ./unprocessed/ISB9.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISB9_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISCL1.1.fastq.gz -2 ./unprocessed/ISCL1.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISCL1_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISCL11.1.fastq.gz -2 ./unprocessed/ISCL11.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISCL11_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISCL3.1.fastq.gz -2 ./unprocessed/ISCL3.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISCL3_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISCL6.1.fastq.gz -2 ./unprocessed/ISCL6.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISCL6_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISCL7.1.fastq.gz -2 ./unprocessed/ISCL7.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISCL7_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL1.1.fastq.gz -2 ./unprocessed/ISL1.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL1_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL10.1.fastq.gz -2 ./unprocessed/ISL10.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL10_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL11.1.fastq.gz -2 ./unprocessed/ISL11.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL11_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL12.1.fastq.gz -2 ./unprocessed/ISL12.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL12_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL13.1.fastq.gz -2 ./unprocessed/ISL13.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL13_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL14.1.fastq.gz -2 ./unprocessed/ISL14.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL14_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL15.1.fastq.gz -2 ./unprocessed/ISL15.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL15_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL16.1.fastq.gz -2 ./unprocessed/ISL16.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL16_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL17.1.fastq.gz -2 ./unprocessed/ISL17.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL17_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL18.1.fastq.gz -2 ./unprocessed/ISL18.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL18_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL19.1.fastq.gz -2 ./unprocessed/ISL19.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL19_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL2.1.fastq.gz -2 ./unprocessed/ISL2.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL2_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL20.1.fastq.gz -2 ./unprocessed/ISL20.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL20_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL21.1.fastq.gz -2 ./unprocessed/ISL21.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL21_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL3.1.fastq.gz -2 ./unprocessed/ISL3.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL3_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL4.1.fastq.gz -2 ./unprocessed/ISL4.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL4_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL6.1.fastq.gz -2 ./unprocessed/ISL6.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL6_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL7.1.fastq.gz -2 ./unprocessed/ISL7.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL7_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL8.1.fastq.gz -2 ./unprocessed/ISL8.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL8_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISL9.1.fastq.gz -2 ./unprocessed/ISL9.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISL9_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISLO1.1.fastq.gz -2 ./unprocessed/ISLO1.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISLO1_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISP1.1.fastq.gz -2 ./unprocessed/ISP1.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISP1_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISP11.1.fastq.gz -2 ./unprocessed/ISP11.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISP11_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISP15.1.fastq.gz -2 ./unprocessed/ISP15.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISP15_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISP17.1.fastq.gz -2 ./unprocessed/ISP17.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISP17_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISP2.1.fastq.gz -2 ./unprocessed/ISP2.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISP2_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISP3.1.fastq.gz -2 ./unprocessed/ISP3.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISP3_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISP5.1.fastq.gz -2 ./unprocessed/ISP5.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISP5_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISP9.1.fastq.gz -2 ./unprocessed/ISP9.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISP9_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU1.1.fastq.gz -2 ./unprocessed/ISU1.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU1_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU14.1.fastq.gz -2 ./unprocessed/ISU14.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU14_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU15.1.fastq.gz -2 ./unprocessed/ISU15.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU15_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU2.1.fastq.gz -2 ./unprocessed/ISU2.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU2_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU27.1.fastq.gz -2 ./unprocessed/ISU27.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU27_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU28.1.fastq.gz -2 ./unprocessed/ISU28.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU28_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU29.1.fastq.gz -2 ./unprocessed/ISU29.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU29_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU3.1.fastq.gz -2 ./unprocessed/ISU3.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU3_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU30.1.fastq.gz -2 ./unprocessed/ISU30.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU30_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU31.1.fastq.gz -2 ./unprocessed/ISU31.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU31_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU32.1.fastq.gz -2 ./unprocessed/ISU32.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU32_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU33.1.fastq.gz -2 ./unprocessed/ISU33.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU33_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU34.1.fastq.gz -2 ./unprocessed/ISU34.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU34_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU35.1.fastq.gz -2 ./unprocessed/ISU35.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU35_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU36.1.fastq.gz -2 ./unprocessed/ISU36.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU36_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU37.1.fastq.gz -2 ./unprocessed/ISU37.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU37_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU38.1.fastq.gz -2 ./unprocessed/ISU38.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU38_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/ISU4.1.fastq.gz -2 ./unprocessed/ISU4.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log ISU4_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/L2.1.fastq.gz -2 ./unprocessed/L2.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log L2_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/M15.1.fastq.gz -2 ./unprocessed/M15.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log M15_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS1.1.fastq.gz -2 ./unprocessed/MUS1.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS1_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS10.1.fastq.gz -2 ./unprocessed/MUS10.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS10_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS11.1.fastq.gz -2 ./unprocessed/MUS11.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS11_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS12.1.fastq.gz -2 ./unprocessed/MUS12.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS12_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS13.1.fastq.gz -2 ./unprocessed/MUS13.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS13_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS14.1.fastq.gz -2 ./unprocessed/MUS14.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS14_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS15.1.fastq.gz -2 ./unprocessed/MUS15.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS15_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS18.1.fastq.gz -2 ./unprocessed/MUS18.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS18_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS19.1.fastq.gz -2 ./unprocessed/MUS19.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS19_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS2.1.fastq.gz -2 ./unprocessed/MUS2.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS2_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS20.1.fastq.gz -2 ./unprocessed/MUS20.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS20_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS23.1.fastq.gz -2 ./unprocessed/MUS23.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS23_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS28.1.fastq.gz -2 ./unprocessed/MUS28.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS28_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS3.1.fastq.gz -2 ./unprocessed/MUS3.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS3_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS32.1.fastq.gz -2 ./unprocessed/MUS32.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS32_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS33.1.fastq.gz -2 ./unprocessed/MUS33.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS33_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS4.1.fastq.gz -2 ./unprocessed/MUS4.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS4_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS5.1.fastq.gz -2 ./unprocessed/MUS5.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS5_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS6.1.fastq.gz -2 ./unprocessed/MUS6.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS6_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS7.1.fastq.gz -2 ./unprocessed/MUS7.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS7_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS8.1.fastq.gz -2 ./unprocessed/MUS8.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS8_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/MUS9.1.fastq.gz -2 ./unprocessed/MUS9.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log MUS9_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P10.1.fastq.gz -2 ./unprocessed/P10.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P10_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P16.1.fastq.gz -2 ./unprocessed/P16.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P16_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P28.1.fastq.gz -2 ./unprocessed/P28.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P28_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P31.1.fastq.gz -2 ./unprocessed/P31.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P31_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P34.1.fastq.gz -2 ./unprocessed/P34.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P34_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P36.1.fastq.gz -2 ./unprocessed/P36.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P36_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P37.1.fastq.gz -2 ./unprocessed/P37.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P37_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P38.1.fastq.gz -2 ./unprocessed/P38.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P38_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P40.1.fastq.gz -2 ./unprocessed/P40.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P40_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P43.1.fastq.gz -2 ./unprocessed/P43.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P43_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P44.1.fastq.gz -2 ./unprocessed/P44.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P44_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P45.1.fastq.gz -2 ./unprocessed/P45.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P45_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P49.1.fastq.gz -2 ./unprocessed/P49.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P49_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P60.1.fastq.gz -2 ./unprocessed/P60.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P60_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P67.1.fastq.gz -2 ./unprocessed/P67.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P67_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P68.1.fastq.gz -2 ./unprocessed/P68.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P68_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P71.1.fastq.gz -2 ./unprocessed/P71.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P71_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P74.1.fastq.gz -2 ./unprocessed/P74.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P74_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/P75.1.fastq.gz -2 ./unprocessed/P75.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log P75_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/PM2.1.fastq.gz -2 ./unprocessed/PM2.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log PM2_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/PM5.1.fastq.gz -2 ./unprocessed/PM5.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log PM5_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/PM7.1.fastq.gz -2 ./unprocessed/PM7.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log PM7_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/PM8.1.fastq.gz -2 ./unprocessed/PM8.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log PM8_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/PM9.1.fastq.gz -2 ./unprocessed/PM9.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log PM9_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R1.1.fastq.gz -2 ./unprocessed/R1.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R1_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R11.1.fastq.gz -2 ./unprocessed/R11.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R11_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R15.1.fastq.gz -2 ./unprocessed/R15.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R15_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R16.1.fastq.gz -2 ./unprocessed/R16.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R16_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R17.1.fastq.gz -2 ./unprocessed/R17.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R17_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R18.1.fastq.gz -2 ./unprocessed/R18.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R18_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R19.1.fastq.gz -2 ./unprocessed/R19.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R19_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R2.1.fastq.gz -2 ./unprocessed/R2.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R2_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R20.1.fastq.gz -2 ./unprocessed/R20.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R20_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R22.1.fastq.gz -2 ./unprocessed/R22.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R22_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R24.1.fastq.gz -2 ./unprocessed/R24.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R24_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R26.1.fastq.gz -2 ./unprocessed/R26.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R26_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R29.1.fastq.gz -2 ./unprocessed/R29.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R29_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R3.1.fastq.gz -2 ./unprocessed/R3.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R3_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R36.1.fastq.gz -2 ./unprocessed/R36.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R36_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R4.1.fastq.gz -2 ./unprocessed/R4.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R4_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R41.1.fastq.gz -2 ./unprocessed/R41.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R41_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R42.1.fastq.gz -2 ./unprocessed/R42.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R42_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R44.1.fastq.gz -2 ./unprocessed/R44.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R44_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R6.1.fastq.gz -2 ./unprocessed/R6.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R6_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/R8.1.fastq.gz -2 ./unprocessed/R8.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log R8_process_shortreads.log &&
+cd .. &&
+stacks process_shortreads -1 ./unprocessed/W3.1.fastq.gz -2 ./unprocessed/W3.2.fastq.gz -o ./processed/ -t 100 -c -q --adapter_1 CTGTCTCTTATACACATCTCCGAGCCCACGAGAC --adapter_2 CTGTCTCTTATACACATCTGACGCTGCCGACGA --no_read_trimming --len_limit 100 &&
+cd processed &&
+mv process_shortreads.log W3_process_shortreads.log &&
+cd .. 
+  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  ## STACKS Parameterization Tests {bash: STACKS}
+
+### Create five groups of three randomly selected individuals to trial values M=1-9 (Jeffries et al. 2016)
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set1.txt -o ./set1/M/M1 -M 1 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set1.txt -o ./set1/M/M2 -M 2 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set1.txt -o ./set1/M/M3 -M 3 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set1.txt -o ./set1/M/M4 -M 4 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set1.txt -o ./set1/M/M5 -M 5 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set1.txt -o ./set1/M/M6 -M 6 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set1.txt -o ./set1/M/M7 -M 7 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set1.txt -o ./set1/M/M8 -M 8 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set1.txt -o ./set1/M/M9 -M 9 -n 2 &&
+
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set2.txt -o ./set2/M/M1 -M 1 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set2.txt -o ./set2/M/M2 -M 2 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set2.txt -o ./set2/M/M3 -M 3 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set2.txt -o ./set2/M/M4 -M 4 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set2.txt -o ./set2/M/M5 -M 5 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set2.txt -o ./set2/M/M6 -M 6 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set2.txt -o ./set2/M/M7 -M 7 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set2.txt -o ./set2/M/M8 -M 8 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set2.txt -o ./set2/M/M9 -M 9 -n 2 -T 8 &&
+
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set3.txt -o ./set3/M/M1 -M 1 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set3.txt -o ./set3/M/M2 -M 2 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set3.txt -o ./set3/M/M3 -M 3 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set3.txt -o ./set3/M/M4 -M 4 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set3.txt -o ./set3/M/M5 -M 5 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set3.txt -o ./set3/M/M6 -M 6 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set3.txt -o ./set3/M/M7 -M 7 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set3.txt -o ./set3/M/M8 -M 8 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set3.txt -o ./set3/M/M9 -M 9 -n 2 -T 8 &&
+
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set4.txt -o ./set4/M/M1 -M 1 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set4.txt -o ./set4/M/M2 -M 2 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set4.txt -o ./set4/M/M3 -M 3 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set4.txt -o ./set4/M/M4 -M 4 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set4.txt -o ./set4/M/M5 -M 5 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set4.txt -o ./set4/M/M6 -M 6 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set4.txt -o ./set4/M/M7 -M 7 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set4.txt -o ./set4/M/M8 -M 8 -n 2 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set4.txt -o ./set4/M/M9 -M 9 -n 2 &&
+
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set5.txt -o ./set5/M/M1 -M 1 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set5.txt -o ./set5/M/M2 -M 2 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set5.txt -o ./set5/M/M3 -M 3 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set5.txt -o ./set5/M/M4 -M 4 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set5.txt -o ./set5/M/M5 -M 5 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set5.txt -o ./set5/M/M6 -M 6 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set5.txt -o ./set5/M/M7 -M 7 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set5.txt -o ./set5/M/M8 -M 8 -n 2 -T 8 &&
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ./popmap_opt_test_set5.txt -o ./set5/M/M9 -M 9 -n 2 -T 8
+
+### Optimum: M=4 determined by the point in which the number of retained SNPs levels off (Jeffries et al. 2016)
+
+### Let's run denovo_map with all the samples with n3, n4, n5 retaining SNPs found in 80% of individuals (Paris et al. 2017)
+
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ~/Thesis/denovo/popmap_1.txt -o ./n3 -M 4 -n 3 -X "populations: -r 0.80" -T 10
+         
+Removed 746871 loci that did not pass sample/population constraints from 747221 loci.
+Kept 350 loci, composed of 35864 sites; 163 of those sites were filtered, 5203 variant sites remained.
+Mean genotyped sites per locus: 102.47bp (stderr 0.20).
+
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ~/Thesis/denovo/popmap_1.txt -o ./n4 -M 4 -n 4 -X "populations: -r 0.80" -T 8
+
+Removed 697807 loci that did not pass sample/population constraints from 698200 loci.
+Kept 393 loci, composed of 40292 sites; 206 of those sites were filtered, 6241 variant sites remained.
+Mean genotyped sites per locus: 102.52bp (stderr 0.19).
+
+stacks denovo_map.pl --samples ~/Thesis/DATA/processed --popmap ~/Thesis/denovo/popmap_1.txt -o ./n5 -M 4 -n 5 -X "populations: -r 0.80" -T 8
+
+Removed 661849 loci that did not pass sample/population constraints from 662259 loci.
+Kept 410 loci, composed of 42045 sites; 239 of those sites were filtered, 6595 variant sites remained.
+Mean genotyped sites per locus: 102.55bp (stderr 0.19).
+
+### Optimal parameter: m=3, M=4, n=5, r=0.5, min-maf=0.05
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ## Genepop - filtering individuals w/low representation {R}
+
+### read genepop file
+library(adegenet)
+library(ape)
+library(hierfstat)
+x <- read.genepop("populations.snps.gen")
+x
+
+### See proportion of SNPs in each individual
+prop_typed_ind <- propTyped(x)
+hist(prop_typed_ind, col = "grey", border = "white", nclass = 30,
+     main = "prop typed in individuals", xlab = "prop loci typed")
+
+prop_typed_ind
+
+### Set a threshold for individuals filtering
+IND_THRESHOLD <- 0.1
+
+### Apply threshold
+x <- x[prop_typed_ind > IND_THRESHOLD]
+x
+
+### Save the SNPs
+
+loci<-locNames(x)
+write.csv(loci, file="whitelist_2380SNPs.csv")
+
+### Save the individuals
+
+sam<-indNames(x)
+write.csv(sam, file="indNames.csv")
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  ## BayeScan - filtering selective SNPs {bash: BayeScan; R}
+
+### convert genepop file to GESTE file w/PGDSpider
+### run BayeScan {bash}
+~/Thesis/BayeScan2.1/binaries/BayeScan2.1_linux64bits populations.snps.txt . 
+
+### Process output and create new whitelists for neutral and selective SNPs {R}
+# Create function
+```{r}
+plot_bayescan<-function(res,FDR=0.05,size=1,pos=0.35,highlight=NULL,name_highlighted=F,add_text=T)
+{
+if (is.character(res))
+  res=read.table(res)
+
+colfstat=5
+colq=colfstat-2
+
+highlight_rows=which(is.element(as.numeric(row.names(res)),highlight))
+non_highlight_rows=setdiff(1:nrow(res),highlight_rows)
+
+outliers=as.integer(row.names(res[res[,colq]<=FDR,]))
+
+ok_outliers=TRUE
+if (sum(res[,colq]<=FDR)==0)
+	ok_outliers=FALSE;
+
+res[res[,colq]<=0.0001,colq]=0.0001
+
+# plot
+plot(log10(res[,colq]),res[,colfstat],xlim=rev(range(log10(res[,colq]))),xlab="log10(q value)",ylab=names(res[colfstat]),type="n")
+points(log10(res[non_highlight_rows,colq]),res[non_highlight_rows,colfstat],pch=19,cex=size)
+
+if (name_highlighted) {
+ 	if (length(highlight_rows)>0) {
+ 		text(log10(res[highlight_rows,colq]),res[highlight_rows,colfstat],row.names(res[highlight_rows,]),col="red",cex=size*1.2,font=2)
+ 	}
+}
+else {
+	points(log10(res[highlight_rows,colq]),res[highlight_rows,colfstat],col="red",pch=19,cex=size)
+	# add names of loci over p and vertical line
+	if (ok_outliers & add_text) {
+		text(log10(res[res[,colq]<=FDR,][,colq])+pos*(round(runif(nrow(res[res[,colq]<=FDR,]),1,2))*2-3),res[res[,colq]<=FDR,][,colfstat],row.names(res[res[,colq]<=FDR,]),cex=size)
+	}
+}
+lines(c(log10(FDR),log10(FDR)),c(-1,1),lwd=2)
+
+return(list("outliers"=outliers,"nb_outliers"=length(outliers)))
+}
+```
+
+# Plot fst file
+```{r}
+plot_bayescan("populations.snps_fst.txt",0,FDR=0.05)
+```
+
+# Remove outliers 
+```{r}
+allSNPs<-read.csv("whitelist_2380SNPs.csv", header = F, sep="")
+
+neutrals<-allSNPs[-c(51,56, 62,68,78,212,238,240,281,287,301,357,382,422,510,531,586,627,653,774,778,781,782,783,789,831, 837,847,849,850,860,868,897,899,900,911,912,940,963,965,973,1019,1077,1089, 1095, 1110, 1117, 1175, 1188, 1215, 1223, 1238, 1240, 1241, 1242, 1331, 1334, 1335, 1342, 1385, 1396, 1409, 1410, 1490, 1491, 1591, 1606, 1623, 1635, 1682, 1699, 1752, 1779, 1780, 1806, 1824, 1829, 1843, 1863, 1869, 1870, 1871, 1873, 1913, 1915, 1916, 1917, 1918, 1919, 1941, 1952, 2015, 2053, 2057, 2061, 2124, 2245, 2246, 2248, 2300, 2305, 2407, 2409, 2434, 2485, 2492, 2497, 2504, 2528, 2532, 2533, 2561, 2562, 2605, 2610, 2617, 2662, 2664, 2665, 2686, 2736, 2737, 2748, 2766, 2768, 2773, 2780, 2823, 2824, 2828, 2838, 2841, 2881, 2919, 2925, 2956, 2968, 2969, 2990, 2991, 3009, 3017, 3018, 3024, 3028, 3029, 3030, 3069, 3101, 3186, 3187, 3191, 3252, 3253, 3276, 3277, 3279, 3282, 3298, 3310, 3327, 3367, 3369, 3377, 3379, 3380, 3381, 3402, 3417, 3430, 3431, 3433, 3443, 3453, 3492, 3528, 3575, 3576, 3622, 3626, 3663, 3673, 3679, 3681, 3682, 3683, 3713, 3724, 3745, 3760, 3761, 3771, 3806, 3833, 3877, 3890, 3949, 3952, 3953, 4032, 4038, 4041, 4045, 4101, 4102, 4103, 4113, 4146, 4175, 4226, 4277, 4281, 4303, 4329, 4337, 4374, 4406, 4469, 4492, 4493, 4656, 4719, 4727, 4728, 4767, 4853, 4891, 4966, 4968, 4973, 5007, 5118, 5130, 5143, 5165, 5225, 5226, 5297, 5447, 5448, 5558, 5641, 5682, 5734, 5781, 5783), ]
+under_selection<-allSNPs[c(51,56,62,68,78,212,238,240,281,287,301,357,382,422,510,531,586,627,653,774,778,781,782,783,789,831, 837,847,849,850,860,868,897,899,900,911,912,940,963,965,973,1019,1077,1089, 1095, 1110, 1117, 1175, 1188, 1215, 1223, 1238, 1240, 1241, 1242, 1331, 1334, 1335, 1342, 1385, 1396, 1409, 1410, 1490, 1491, 1591, 1606, 1623, 1635, 1682, 1699, 1752, 1779, 1780, 1806, 1824, 1829, 1843, 1863, 1869, 1870, 1871, 1873, 1913, 1915, 1916, 1917, 1918, 1919, 1941, 1952, 2015, 2053, 2057, 2061, 2124, 2245, 2246, 2248, 2300, 2305, 2407, 2409, 2434, 2485, 2492, 2497, 2504, 2528, 2532, 2533, 2561, 2562, 2605, 2610, 2617, 2662, 2664, 2665, 2686, 2736, 2737, 2748, 2766, 2768, 2773, 2780, 2823, 2824, 2828, 2838, 2841, 2881, 2919, 2925, 2956, 2968, 2969, 2990, 2991, 3009, 3017, 3018, 3024, 3028, 3029, 3030, 3069, 3101, 3186, 3187, 3191, 3252, 3253, 3276, 3277, 3279, 3282, 3298, 3310, 3327, 3367, 3369, 3377, 3379, 3380, 3381, 3402, 3417, 3430, 3431, 3433, 3443, 3453, 3492, 3528, 3575, 3576, 3622, 3626, 3663, 3673, 3679, 3681, 3682, 3683, 3713, 3724, 3745, 3760, 3761, 3771, 3806, 3833, 3877, 3890, 3949, 3952, 3953, 4032, 4038, 4041, 4045, 4101, 4102, 4103, 4113, 4146, 4175, 4226, 4277, 4281, 4303, 4329, 4337, 4374, 4406, 4469, 4492, 4493, 4656, 4719, 4727, 4728, 4767, 4853, 4891, 4966, 4968, 4973, 5007, 5118, 5130, 5143, 5165, 5225, 5226, 5297, 5447, 5448, 5558, 5641, 5682, 5734, 5781, 5783), ]
+
+write.csv(neutrals, file="whitelist_neutrals_28600.csv")
+write.csv(under_selection, file="whitelist_selection_154.csv")
+```
+
+### rerun populations
+stacks populations -P ~/Thesis/denovo/denovomap_2 -M ~/Thesis/postPop_1/indNames.txt -W ~/Thesis/postBaye_1/whitelist_neutrals_28600.txt -O ./postBaye_reads --vcf
