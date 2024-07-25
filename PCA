@@ -1,0 +1,42 @@
+# Principal Component Analysis {R}
+
+library(adegenet)
+library(ape)
+library(hierfstat)
+
+x <- read.genepop("~/Desktop/Masters/populations/populations.snps_biden.gen") 
+x
+
+X <- scaleGen(x, NA.method="mean") #missing data replaced by the mean
+
+x$pop <- factor(
+  x$pop,
+  levels = c("I.SA5", "I.Mad2", "I.May4", "WP.MasR2", "WP.FPMarUH1", "WP.FPMo9", "WP.FPTuMA2", "WP.KirLMi2","WP.AS2", "WP.CNMI1", "WP.GuamU8", "WP.LineP2", "WP.KirPK1","WP.Marsh1", "WP.PNG1"),
+  labels = c("Saudi Arabia", "Madagascar", "Mayotte", "Mascarene Islands","Marquesas Islands", "Mo'orea", "Tuamotu Islands","South Line Islands","American Samoa", "Mariana Islands", "Guam", "North Line Islands", "Phoenix Islands",  "Marshall Islands", "Papua New Guinea")
+  )
+
+pca1 <- dudi.pca(X,cent=FALSE,scale=FALSE,scannf=FALSE,nf=2)
+
+barplot(pca1$eig[1:50],main="PCA eigenvalues", col=heat.colors(50))
+
+col <- funky(7)
+
+s.class(pca1$li,pop(x),col=c(col), pch=20,cstar=0, grid=FALSE,cpoint=3)
+
+
+## Format PCA
+
+library("FactoMineR")
+library("factoextra")
+library("RColorBrewer")
+
+pdf(file = "~/Desktop/biden_pca.pdf")
+
+pca <- fviz_pca_ind(pca1, axes = c(1, 2), label = "all", geom = "point",
+            col.ind = pop(x), pointsize = 3, pointshape = 19, scale = T,
+             legend.title = "Population", mean.point = F,
+             addEllipses = F, palette = c("#440154","#C98AD8","#A480CF","#A581AE","#2d718e",  "#1e9d89",  "#29af7f","#40bd72", "#6ccd5a", "#a0da39","#addc30","#c2df23", "#dfe318", "#f1e51d", "#fde725")) +
+  labs(title = "") 
+pca 
+
+dev.off()
