@@ -1,0 +1,30 @@
+# Create STRUCTURE file via STACKS
+
+
+# Add files to STRUCTURE directory and write script
+
+## files: mainparams.txt, extraparams.txt, command.sh (script), seed.txt, structure.exe, and the created structure file
+## modify mainparams. txt to reflect number of individuals (line 26) and number of loci (line 27) and define infile (line 21) and outfile (line 22)
+
+# Run script then zip files into a single file to be visualized via PopHelper
+mkdir structure_results &&
+cd k1 &&
+cp out* ../structure_results &&
+cd ../k2 &&
+cp out* ../structure_results &&
+cd ../k3 &&
+cp out* ../structure_results &&
+cd ../k4 &&
+cp out* ../structure_results &&
+cd ../k5 &&
+cp out* ../structure_results &&
+cd ../k6 &&
+cp out* ../structure_results &&
+cd ../k7 &&
+cp out* ../structure_results &&
+cd ../k8 &&
+cp out* ../structure_results &&
+cd .. &&
+zip -r structure_results.zip ./structure_results
+
+# In PopHelper: 
