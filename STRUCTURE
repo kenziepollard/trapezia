@@ -29,3 +29,167 @@ cd .. &&
 zip -r structure_results.zip ./structure_results
 
 # In PopHelper: 
+
+library("pophelper")
+library(devtools)
+library(gridExtra)
+
+sfiles <- list.files(path="~/Desktop/Final_analysis/biden/structure/structure_results/", full.names=T)
+
+slist <- readQ(files=sfiles)
+
+sr1 <- summariseQ(tabulateQ(slist))
+
+write.csv(evannoMethodStructure(sr1), "evannoMethodStructure.csv", na = "")
+p <- evannoMethodStructure(data=sr1, exportplot=F, returnplot=T, returndata=F, basesize = 12, linesize = 0.7)
+grid.arrange(p) # determine which K value is most accurate
+
+onelabsetrep <- biden_labset_io[,2,drop=FALSE]
+
+p1 <- plotQ(slist[c(15,35)],imgoutput = "join", returnplot=T,exportplot=F,basesize=10, barsize = 1, height = 10, grplab=onelabsetrep,grplabsize=2.5,linesize=1,pointsize=3,showindlab=F, showdiv = T, divcol = "white", divsize = 1, clustercol = c("#D93A2B", "#9471B4","#F2B950", "#396D35"), ordergrp = T, grplabangle = 90, showsp = F, subsetgrp = c("Saudi Arabia", "Madagascar", "Mascarene Islands", "Mayotte", "Marquesas Islands", "Papua New Guinea", "Marshall Islands", "Line Islands", "CNMI", "Guam", "Kiribati", "Wake Island", "American Samoa", "Tuamotu Islands", "Mo'orea"), sharedindlab = T)
+grid.arrange(p1$plot[[1]])
+
+
+# Creating pie chart
+
+# Load packages
+```{r}
+library(adegenet)
+library(poppr)
+library(LEA)
+library(reshape2)
+library(dplyr)
+library(ggplot2)
+library(rworldmap)
+library(rworldxtra)
+library(ggsn)
+library(sf)
+library(raster)
+library(rgeos)
+library(maps)
+library(maptools)
+library(grid)
+library(miscTools)
+library(stringr)
+library(ggpubr)
+```
+
+# Label column names of qmatrix
+```{r}
+library("pophelper")
+library(devtools)
+library(gridExtra)
+
+sfiles <- list.files(path="~/Desktop/structure_biden_pacific_nowake/structure_results_pacific/", full.names=T)
+
+slist <- readQ(files=sfiles)
+
+onelabsetrep <- biden_labset_nowake_pacific[,2,drop=FALSE]
+
+qmatrix <- as.data.frame(slist[22]) # slist is in pophelper portion of Thesis R code
+
+ncol(qmatrix)
+cluster_names = c()
+for (i in 1:ncol(qmatrix)){
+  cluster_names[i] = paste("Cluster", i)
+}
+cluster_names
+colnames(qmatrix) = cluster_names
+head(qmatrix)
+```
+
+# Add individual IDs
+```{r}
+qmatrix$Ind = biden_labset_nowake_pacific$Sample_name
+```
+# Add site IDs
+```{r}
+qmatrix$Site = biden_labset_nowake_pacific$Locality
+head(qmatrix)
+```
+
+# Convert dataframe to long format
+```{r}
+qlong = melt(qmatrix, id.vars=c("Ind","Site"))
+head(qlong)
+```
+
+# Change order of sites by using the factor function
+# site.order = c("Vig","Ios","Cor","Mul","She","Cro","Hel","Flo","Lys","Ber")
+# qlong$Site_ord = factor(qlong$Site, levels = site.order)
+
+# Adjust facet labels
+levels(qlong$Site)
+facet.labs = c("Bergen","Cromer","Flodevigen","Helgoland","Île de Ré",
+               "Isles of Scilly","Lysekil","Mullet Peninsula","Shetland","Vigo")
+levels(qlong$Site) = facet.labs
+levels(qlong$Site)
+
+# Define colour palette
+```{r}
+pal = colorRampPalette(c("#35b779","#31688e","#fde725"))
+cols = pal(length(unique(qlong$variable)))
+```
+# Plot admixture barplot 
+```{r}
+admix.bar = ggplot(data=qlong, aes(x=Ind, y=value, fill=variable))+
+  geom_bar(stat = "identity")+
+  scale_y_continuous(expand = c(0,0))+
+  facet_wrap(~Site, scales = "free", ncol = 2)+
+  scale_fill_manual(values = cols)+
+  ylab("Admixture proportion")+
+  # xlab("Individual")+
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.title.x = element_blank(),
+        strip.text = element_text(colour="black", size=12),
+        panel.grid = element_blank(),
+        panel.background = element_blank(),
+        legend.position = "top",
+        legend.title = element_blank(),
+        legend.text = element_text(size = 12))
+admix.bar
+#ggsave("1.admixture_barplot.png", width=6, height=10, dpi=300)
+```
+
+# Calculate mean admixture proportions for each site
+```{R}
+head(qmatrix)
+clusters = grep("Cluster", names(qmatrix)) # indexes of cluster columns
+avg_admix = aggregate(qmatrix[, clusters], list(qmatrix$Site), mean)
+```
+
+# Convert dataframe from wide to long format
+```{r}
+avg_admix = melt(avg_admix, id.vars = "Group.1")
+head(avg_admix)
+```
+
+# Define a function to plot pie charts using ggplot for each site
+```{r}
+pie_charts = function(admix_df, site, cols){
+  # admix_df = dataframe in long format of admixture proportions per site 
+  # site = string 
+  # cols = vector of colours of length(clusters)
+  ggplot(data = subset(admix_df, Group.1 == site),
+         aes(x = "", y = value, fill = variable))+
+    geom_bar(width = 1, stat = "identity", colour = "black", show.legend = FALSE)+
+    coord_polar(theta = "y")+
+    scale_fill_manual(values = cols)+
+    theme_void()
+}
+```
+# Test function on one site
+```{r}
+pie_charts(avg_admix, site = "Papua New Guinea", cols = cols)
+```
+
+
+# Create Map
+
+library(ggOceanMaps)
+
+## Indo-Pacific Map
+
+basemap <- basemap(limits = c(40,-140,-30,40), bathymetry = F,rotate=T, land.col = "lightgrey") 
+basemap
