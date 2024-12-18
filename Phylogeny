@@ -1,0 +1,10 @@
+# Create phylip file in STACKS
+
+populations -P /STACKS -M /maps/indNames_iqtree_all.txt -W /whitelist_neutrals_allsp.txt -O iqtree/all_species_neutral --phylip-var
+
+# Creating phylogeny via IQTREE
+
+Model test script: iqtree -s AllSpecies_ASC.txt -st DNA -m TESTONLY
+Tree building script: iqtree -s AllSpecies_ASC.txt -st DNA -m TVM+G4+F+ASC -bb 1000 -alrt 1000
+
+# Visualized and editted in FigTree V1.4.4
