@@ -1,0 +1,85 @@
+# Values are found via 
+
+stacks-dist-extract ./stacks/population_r80/populations.log.distribs
+
+# Visualization & Statistical Tests
+
+library(ggplot2)
+data <- SNP_filtering_analysis
+
+
+ggplot(data, aes(x=DNA_concentration, y=Retained_Reads, color = Type))+
+  geom_point()
+
+ggplot(data, aes(x=prop_library, y=reorder(Sample,prop_library), color = Type))+
+  geom_point()
+  theme_minimal()+
+  theme(axis.text.y=element_blank(),
+        axis.ticks.y=element_blank() 
+        )+
+  ylab("Sample")+
+  theme(panel.grid.major = element_blank())
+  
+model <- lm(DNA_concentration ~ Retained_Reads, data = data)
+summary(model)
+
+ggplot(data, aes(x=prop_library, y=Type, color = Type))+
+  geom_boxplot()+
+  theme_minimal()
+
+ggplot(data, aes(x=prop_retained, y=reorder(Sample,prop_retained), color = Type))+
+  geom_point()+
+  theme_minimal()+
+  theme(axis.text.y=element_blank(),
+        axis.ticks.y=element_blank() 
+        )+
+  ylab("Sample")+
+  theme(panel.grid.major = element_blank())
+
+ggplot(data, aes(x=prop_retained, y=Type, color = Type))+
+  geom_boxplot()+
+  theme_minimal()
+
+ggplot(data, aes(x=Retained_Reads, y=reorder(Sample,Retained_Reads), color = Type))+
+  geom_point()+
+  theme_minimal()+
+  theme(axis.text.y=element_blank(),
+        axis.ticks.y=element_blank() 
+        )+
+  ylab("Sample")+
+  theme(panel.grid.major = element_blank())
+
+ggplot(data, aes(x=Retained_Reads, y=Type, color = Type))+
+  geom_boxplot()+
+  theme_minimal()
+
+ggplot(data, aes(x=Coverage, y=reorder(Sample,Coverage), color = Type))+
+  geom_point()+
+  theme_minimal()+
+  theme(axis.text.y=element_blank(),
+        axis.ticks.y=element_blank() 
+        )+
+  ylab("Sample")+
+  theme(panel.grid.major = element_blank())
+
+ggplot(data, aes(x=Coverage, y=Type, color = Type))+
+  geom_boxplot()+
+  theme_minimal()
+```
+
+## stats tests for DNA concentration and correlation
+```{r}
+# t-test for fresh vs. museum concentrations
+
+dna <- read.csv("~/Desktop/Masters/Phylogeo_manuscript/Final_drafts/Final_Figures/SNP_filtering_analysis.csv")
+fresh <- dplyr::filter(dna, Fresh_Museum == "F")
+museum <- dplyr::filter(dna, Fresh_Museum == "M")
+
+t.test(fresh$DNA_concentration, museum$DNA_concentration)
+
+t.test(fresh$Retained_Reads, museum$Retained_Reads)
+
+# regression between DNA concentration and retained reads
+
+lm <- lm(DNA_concentration~X..retained, data = dna)
+summary(lm)
