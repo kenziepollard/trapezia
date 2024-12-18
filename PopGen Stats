@@ -1,0 +1,114 @@
+# Reynold's and Nei's Numbers {R}
+
+library("poppr")
+library(adegenet)
+library(ape)
+library(hierfstat)
+
+x <- read.genepop("~/Desktop/populations.snps.gen")
+x
+
+x$pop <- factor(
+  x$pop,
+  levels = c("WP.GuamP27_Be", "WP.KirPN1", "WP.PNG2_C", "WP.FPMo22", "WP.GuamW1_G", "WP.KirLM3", "WP.GuamU1_Sp", "WP.GuamU4", "WP.GuamL24_D", "WP.Tai1_R", "WP.GuamP3_F", "WP.MasR2", "WP.PNG1", "WP.FPMarUH1", "WP.KirLMi2"),
+  labels = c("T. serenei", "T. lutea", "T. cymodoce", "T. punctimanus","T. guttata", "T. tigrina", "T. speciosa", "T. formosa", "T. digitalis","T. rufopunctata","T. flavopunctata","T. bidentata - Indian Ocean","T. bidentata - West Pacific","T. bidentata - Marquesas Is.","T. bidentata - Central Pacific")
+  )
+
+x2 <- genind2genpop(
+  x,
+  pop = NULL,
+  quiet = FALSE,
+  process.other = FALSE,
+  other.action = mean
+)
+rey <- dist.genpop(x2, method = 3, diag = FALSE, upper = FALSE)
+nei <- dist.genpop(x2, method = 1, diag = FALSE, upper = FALSE)
+
+write.csv(as.matrix(rey), "~/Desktop/reynoldsD.csv")
+write.csv(as.matrix(nei), "~/Desktop/neisD.csv")
+
+
+# Pairwise Fst {R}
+
+library(StAMPP)
+library(dartR)
+library(ade4)
+
+x <- read.genepop("~/Desktop/populations.snps.gen")
+x
+
+xgl<-gi2gl(x, verbose=2)#stamppFst needs a genlight object
+fsttable_pval<-stamppFst(xgl, nboots = 1000, percent = 95, nclusters = 4)#This is with pvalues and bootstraps.
+fsttable_pval
+
+n <- as.numeric(unlist(fsttable_pval))
+
+p.adjust(n, method = "bonferroni", n = length(n))
+
+write.csv(fsttable_pval$Fsts, "~/Desktop/pairwise_FST_table_biden_clades_nowake.csv")
+write.csv(fsttable_pval$Pvalues, "~/Desktop/pairwise_FST_pval_biden_clades_nowake.csv")
+
+
+# Basic Stats {R}
+
+library(adegenet)
+library(hierfstat)
+
+x <- read.genepop("~/Desktop/populations.snps.gen")
+x
+
+bs<-basic.stats(x)
+bs$overall
+
+
+# AMOVA {R}
+
+library(poppr)
+x <- read.genepop("~/Desktop/populations.snps.gen")
+x
+amova.result <- poppr.amova(x, ~pop, cutoff = 0.5)
+amova.result
+amova.test <- randtest(amova.result)
+plot(amova.test)
+amova.test
+
+
+# Isolation By Distance {R}
+
+library(adegenet)
+library(dartR)
+library(ggplot2)
+library(RColorBrewer)
+
+x <- read.genepop("~/Desktop/populations.snps.gen")
+x
+
+biden_coordinates <- biden_lat_lon_pacific
+
+gen2 <- gi2gl(x)
+gen2@other$latlon <- biden_coordinates[,3:4]
+
+gen2$pop <- factor(
+  gen2$pop,
+  levels = c("WP.FPMo9", "WP.FPTuMA2","WP.KirLMi2","WP.AS2", "WP.CNMI1", "WP.GuamU8", "WP.KirPK1", "WP.LineP2", "WP.Marsh1", "WP.PNG1"),
+  labels = c("Mo'orea", "Tuamotu Islands","North Line Islands","American Samoa", "Mariana Islands", "Guam", "South Line Islands", "Phoenix Islands",  "Marshall Islands", "Papua New Guinea")
+  )
+
+pdf(file = "~/Desktop/biden_ibd.pdf")
+
+ibd <- gl.ibd(
+  x = gen2,
+  distance = "Fst",
+  coordinates = "latlon",
+  Dgen = NULL,
+  Dgeo = NULL,
+  Dgeo_trans = "Dgeo",
+  Dgen_trans = "Dgen",
+  permutations = 999,
+  plot.out = TRUE,
+  paircols = "pop",
+  save2tmp = FALSE,
+  verbose = NULL,
+  plot_theme = theme_minimal())
+  
+dev.off()
