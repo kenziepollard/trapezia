@@ -1,5 +1,6 @@
 # Create STRUCTURE file via STACKS
 
+stacks populations -P STACKS_biden -M /maps/indNames_biden_postpop.txt -W /whitelist/whitelist_biden_neutrals_12057.txt -O /biden_neutral --write-single-snp --structure
 
 # Add files to STRUCTURE directory and write script
 
